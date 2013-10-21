@@ -391,7 +391,7 @@ public class Bittorent_Like extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnNoiTapTinActionPerformed
     /*
-     * chọn file cần dow
+     * chọn file cần startDownload
      */
     private void btnTaiTatCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaiTatCaActionPerformed
         // TODO add your handling code here:
@@ -429,15 +429,16 @@ public class Bittorent_Like extends javax.swing.JFrame {
                         dow = new DownloadChunk();
                         dow.file = fi;
                         dow.peer = peer;
-                        dow.chunkdow = i + 1;
+                        dow.thuTuChunk = i + 1;
                         System.out.println("dang down chunk: " + (i + 1));
                         dow.start();
                         System.out.println("da down xong chunk: " + (i + 1));
-                    } else {
                     }
                 }
             }
         }
+        
+        
     }//GEN-LAST:event_btnTaiTatCaActionPerformed
 
     /*
@@ -456,7 +457,7 @@ public class Bittorent_Like extends javax.swing.JFrame {
     }//GEN-LAST:event_btnChonCatTapTinActionPerformed
 
     /*
-     * dow chunk chọn trên combox
+     * startDownload chunk chọn trên combox
      */
     private void btnTaiChunkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaiChunkActionPerformed
         // TODO add your handling code here:
@@ -471,10 +472,10 @@ public class Bittorent_Like extends javax.swing.JFrame {
         String[] mang = chunk.split("_");
         String tam = mang[1];
         tam = tam.substring(0, tam.length() - 6);
-        dow.chunkdow = Integer.parseInt(tam);
+        dow.thuTuChunk = Integer.parseInt(tam);
         System.out.println("Đang dow chunk: " + mang[1]);
         dow.start();
-        //System.out.println("Đã dow xong chunk: " + mang[1]);
+        //System.out.println("Đã startDownload xong chunk: " + mang[1]);
 
 
     }//GEN-LAST:event_btnTaiChunkActionPerformed
@@ -514,7 +515,7 @@ public class Bittorent_Like extends javax.swing.JFrame {
                 LogFile.Write("@Tải torrent: Mở tập tin " + fc.getSelectedFile().getAbsolutePath());
                 
                 FileInputStream fis = null;
-                f = fc.getSelectedFile(); // chọn file cần dow
+                f = fc.getSelectedFile(); // chọn file cần startDownload
                 int sochunk = 0;
                 try {
                     fis = new FileInputStream(fc.getSelectedFile());

@@ -1,8 +1,6 @@
 
-import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.EventListener;
@@ -10,7 +8,6 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 /*
  * To change this template, choose Tools | Templates
