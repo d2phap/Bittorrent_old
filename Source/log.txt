@@ -1,0 +1,59 @@
+21/10/2013 01:33:31 > #END_PROGRAM-------------------------------------------------------
+21/10/2013 01:32:10 > @Tải torrent: Mở tập tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\torrent\Photos_downloaded_by_AirDroid.zip.torrent
+21/10/2013 01:31:29 > #END Noifile()
+21/10/2013 01:31:29 > Nối thành công ghepfile/2009_Nua_dem_bien_gioi-Hoang-Oanh.swf/2009_Nua_dem_bien_gioi-Hoang-Oanh.swf
+21/10/2013 01:31:29 > Nối chunk thứ i = 10
+21/10/2013 01:31:29 > Nối chunk thứ i = 9
+21/10/2013 01:31:29 > Nối chunk thứ i = 8
+21/10/2013 01:31:29 > Nối chunk thứ i = 7
+21/10/2013 01:31:29 > Nối chunk thứ i = 6
+21/10/2013 01:31:29 > Nối chunk thứ i = 5
+21/10/2013 01:31:29 > Nối chunk thứ i = 4
+21/10/2013 01:31:29 > Nối chunk thứ i = 3
+21/10/2013 01:31:29 > Nối chunk thứ i = 2
+21/10/2013 01:31:29 > Nối chunk thứ i = 1
+21/10/2013 01:31:29 > Nối chunk thứ i = 0
+21/10/2013 01:31:29 > Bắt đầu nối tập tin
+21/10/2013 01:31:29 > Đã tạo CustomEventListener. Tạo CustomEventObject
+21/10/2013 01:31:29 > Kiểm tra có tạo CustomEventListener chưa?
+21/10/2013 01:31:29 > Đọc số chunk: 11
+21/10/2013 01:31:29 > Tạo mới thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\ghepfile\2009_Nua_dem_bien_gioi-Hoang-Oanh.swf
+21/10/2013 01:31:29 > Thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\ghepfile\2009_Nua_dem_bien_gioi-Hoang-Oanh.swf không tồn tại
+21/10/2013 01:31:29 > Bắt đầu kiểm tra thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\ghepfile\2009_Nua_dem_bien_gioi-Hoang-Oanh.swf
+21/10/2013 01:31:29 > #BEGIN NoiFile(): 2009_Nua_dem_bien_gioi-Hoang-Oanh.swf
+21/10/2013 01:31:28 > @Nối tập tin: Mở tập tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\torrent\2009_Nua_dem_bien_gioi-Hoang-Oanh.swf.torrent
+21/10/2013 01:30:22 > #END Noifile()
+21/10/2013 01:30:22 > !ERROR: Chunk\Photos_downloaded_by_AirDroid.zip\Photos_downloaded_by_AirDroid.zip_11.chunk (The system cannot find the file specified)
+21/10/2013 01:30:17 > Nối chunk thứ i = 9
+21/10/2013 01:30:17 > Nối chunk thứ i = 8
+21/10/2013 01:30:17 > Nối chunk thứ i = 7
+21/10/2013 01:30:17 > Nối chunk thứ i = 6
+21/10/2013 01:30:17 > Nối chunk thứ i = 5
+21/10/2013 01:30:17 > Nối chunk thứ i = 4
+21/10/2013 01:30:17 > Nối chunk thứ i = 3
+21/10/2013 01:30:17 > Nối chunk thứ i = 2
+21/10/2013 01:30:17 > Nối chunk thứ i = 1
+21/10/2013 01:30:17 > Nối chunk thứ i = 0
+21/10/2013 01:30:17 > Bắt đầu nối tập tin
+21/10/2013 01:30:17 > Đã tạo CustomEventListener. Tạo CustomEventObject
+21/10/2013 01:30:17 > Kiểm tra có tạo CustomEventListener chưa?
+21/10/2013 01:30:17 > Đọc số chunk: 65
+21/10/2013 01:30:17 > Bắt đầu kiểm tra thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\ghepfile\Photos_downloaded_by_AirDroid.zip
+21/10/2013 01:30:17 > #BEGIN NoiFile(): Photos_downloaded_by_AirDroid.zip
+21/10/2013 01:30:14 > @Nối tập tin: Mở tập tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\torrent\Photos_downloaded_by_AirDroid.zip.torrent
+21/10/2013 01:29:25 > #END Catfile()
+21/10/2013 01:29:25 > Cắt thành công 4/4 chunks
+21/10/2013 01:29:25 > Cắt chunk thứ i = 3
+21/10/2013 01:29:25 > Cắt chunk thứ i = 2
+21/10/2013 01:29:25 > Cắt chunk thứ i = 1
+21/10/2013 01:29:25 > Cắt chunk thứ i = 0
+21/10/2013 01:29:25 > Bắt đầu cắt tập tin
+21/10/2013 01:29:25 > Đã tạo CustomEventListener. Tạo CustomEventObject
+21/10/2013 01:29:25 > Kiểm tra có tạo CustomEventListener chưa?
+21/10/2013 01:29:25 > Ghi số lượng chunk sẽ cắt: 4
+21/10/2013 01:29:25 > Đếm số lượng chunk sẽ cắt
+21/10/2013 01:29:25 > Bắt đầu kiểm tra thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\.\torrent
+21/10/2013 01:29:25 > Bắt đầu kiểm tra thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\.\Chunk\1.pptx
+21/10/2013 01:29:25 > #BEGIN Catfile(): 1.pptx
+21/10/2013 01:29:24 > @Cắt tập tin: Mở tập tin C:\Users\Duong Dieu Phap\Desktop\1.pptx
+21/10/2013 01:28:58 > #START_PROGRAM-----------------------------------------------------
