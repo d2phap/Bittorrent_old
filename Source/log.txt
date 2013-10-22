@@ -1,61 +1,412 @@
-21/10/2013 17:38:42 > #END_PROGRAM-------------------------------------------------------
-21/10/2013 17:38:20 > #START_PROGRAM-----------------------------------------------------
-21/10/2013 01:33:31 > #END_PROGRAM-------------------------------------------------------
-21/10/2013 01:32:10 > @Tải torrent: Mở tập tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\torrent\Photos_downloaded_by_AirDroid.zip.torrent
-21/10/2013 01:31:29 > #END Noifile()
-21/10/2013 01:31:29 > Nối thành công ghepfile/2009_Nua_dem_bien_gioi-Hoang-Oanh.swf/2009_Nua_dem_bien_gioi-Hoang-Oanh.swf
-21/10/2013 01:31:29 > Nối chunk thứ i = 10
-21/10/2013 01:31:29 > Nối chunk thứ i = 9
-21/10/2013 01:31:29 > Nối chunk thứ i = 8
-21/10/2013 01:31:29 > Nối chunk thứ i = 7
-21/10/2013 01:31:29 > Nối chunk thứ i = 6
-21/10/2013 01:31:29 > Nối chunk thứ i = 5
-21/10/2013 01:31:29 > Nối chunk thứ i = 4
-21/10/2013 01:31:29 > Nối chunk thứ i = 3
-21/10/2013 01:31:29 > Nối chunk thứ i = 2
-21/10/2013 01:31:29 > Nối chunk thứ i = 1
-21/10/2013 01:31:29 > Nối chunk thứ i = 0
-21/10/2013 01:31:29 > Bắt đầu nối tập tin
-21/10/2013 01:31:29 > Đã tạo CustomEventListener. Tạo CustomEventObject
-21/10/2013 01:31:29 > Kiểm tra có tạo CustomEventListener chưa?
-21/10/2013 01:31:29 > Đọc số chunk: 11
-21/10/2013 01:31:29 > Tạo mới thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\ghepfile\2009_Nua_dem_bien_gioi-Hoang-Oanh.swf
-21/10/2013 01:31:29 > Thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\ghepfile\2009_Nua_dem_bien_gioi-Hoang-Oanh.swf không tồn tại
-21/10/2013 01:31:29 > Bắt đầu kiểm tra thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\ghepfile\2009_Nua_dem_bien_gioi-Hoang-Oanh.swf
-21/10/2013 01:31:29 > #BEGIN NoiFile(): 2009_Nua_dem_bien_gioi-Hoang-Oanh.swf
-21/10/2013 01:31:28 > @Nối tập tin: Mở tập tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\torrent\2009_Nua_dem_bien_gioi-Hoang-Oanh.swf.torrent
-21/10/2013 01:30:22 > #END Noifile()
-21/10/2013 01:30:22 > !ERROR: Chunk\Photos_downloaded_by_AirDroid.zip\Photos_downloaded_by_AirDroid.zip_11.chunk (The system cannot find the file specified)
-21/10/2013 01:30:17 > Nối chunk thứ i = 9
-21/10/2013 01:30:17 > Nối chunk thứ i = 8
-21/10/2013 01:30:17 > Nối chunk thứ i = 7
-21/10/2013 01:30:17 > Nối chunk thứ i = 6
-21/10/2013 01:30:17 > Nối chunk thứ i = 5
-21/10/2013 01:30:17 > Nối chunk thứ i = 4
-21/10/2013 01:30:17 > Nối chunk thứ i = 3
-21/10/2013 01:30:17 > Nối chunk thứ i = 2
-21/10/2013 01:30:17 > Nối chunk thứ i = 1
-21/10/2013 01:30:17 > Nối chunk thứ i = 0
-21/10/2013 01:30:17 > Bắt đầu nối tập tin
-21/10/2013 01:30:17 > Đã tạo CustomEventListener. Tạo CustomEventObject
-21/10/2013 01:30:17 > Kiểm tra có tạo CustomEventListener chưa?
-21/10/2013 01:30:17 > Đọc số chunk: 65
-21/10/2013 01:30:17 > Bắt đầu kiểm tra thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\ghepfile\Photos_downloaded_by_AirDroid.zip
-21/10/2013 01:30:17 > #BEGIN NoiFile(): Photos_downloaded_by_AirDroid.zip
-21/10/2013 01:30:14 > @Nối tập tin: Mở tập tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\torrent\Photos_downloaded_by_AirDroid.zip.torrent
-21/10/2013 01:29:25 > #END Catfile()
-21/10/2013 01:29:25 > Cắt thành công 4/4 chunks
-21/10/2013 01:29:25 > Cắt chunk thứ i = 3
-21/10/2013 01:29:25 > Cắt chunk thứ i = 2
-21/10/2013 01:29:25 > Cắt chunk thứ i = 1
-21/10/2013 01:29:25 > Cắt chunk thứ i = 0
-21/10/2013 01:29:25 > Bắt đầu cắt tập tin
-21/10/2013 01:29:25 > Đã tạo CustomEventListener. Tạo CustomEventObject
-21/10/2013 01:29:25 > Kiểm tra có tạo CustomEventListener chưa?
-21/10/2013 01:29:25 > Ghi số lượng chunk sẽ cắt: 4
-21/10/2013 01:29:25 > Đếm số lượng chunk sẽ cắt
-21/10/2013 01:29:25 > Bắt đầu kiểm tra thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\.\torrent
-21/10/2013 01:29:25 > Bắt đầu kiểm tra thư mục F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorent_Like\.\Chunk\1.pptx
-21/10/2013 01:29:25 > #BEGIN Catfile(): 1.pptx
-21/10/2013 01:29:24 > @Cắt tập tin: Mở tập tin C:\Users\Duong Dieu Phap\Desktop\1.pptx
-21/10/2013 01:28:58 > #START_PROGRAM-----------------------------------------------------
+23/10/2013 00:30:25 > #START_PROGRAM-----------------------------------------------------
+23/10/2013 00:01:01 > @T?i torrent: M? t?p tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\torrent\npp.6.4.5.Installer.exe.torrent
+23/10/2013 00:00:56 > @T?i torrent: M? t?p tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\torrent\ConnectifyInstaller.exe.torrent
+23/10/2013 00:00:49 > #START_PROGRAM-----------------------------------------------------
+22/10/2013 23:56:51 > #END_PROGRAM-------------------------------------------------------
+22/10/2013 23:56:03 > #END Noifile()
+22/10/2013 23:56:03 > N?i th�nh c�ng ghepfile/Khoc Tham.mp4/Khoc Tham.mp4
+22/10/2013 23:56:03 > N?i chunk th? i = 71
+22/10/2013 23:56:03 > N?i chunk th? i = 70
+22/10/2013 23:56:03 > N?i chunk th? i = 69
+22/10/2013 23:56:03 > N?i chunk th? i = 68
+22/10/2013 23:56:03 > N?i chunk th? i = 67
+22/10/2013 23:56:03 > N?i chunk th? i = 66
+22/10/2013 23:56:03 > N?i chunk th? i = 65
+22/10/2013 23:56:03 > N?i chunk th? i = 64
+22/10/2013 23:56:02 > N?i chunk th? i = 63
+22/10/2013 23:56:02 > N?i chunk th? i = 62
+22/10/2013 23:56:02 > N?i chunk th? i = 61
+22/10/2013 23:56:02 > N?i chunk th? i = 60
+22/10/2013 23:56:02 > N?i chunk th? i = 59
+22/10/2013 23:56:02 > N?i chunk th? i = 58
+22/10/2013 23:56:02 > N?i chunk th? i = 57
+22/10/2013 23:56:02 > N?i chunk th? i = 56
+22/10/2013 23:56:02 > N?i chunk th? i = 55
+22/10/2013 23:56:02 > N?i chunk th? i = 54
+22/10/2013 23:56:02 > N?i chunk th? i = 53
+22/10/2013 23:56:02 > N?i chunk th? i = 52
+22/10/2013 23:56:02 > N?i chunk th? i = 51
+22/10/2013 23:56:02 > N?i chunk th? i = 50
+22/10/2013 23:56:02 > N?i chunk th? i = 49
+22/10/2013 23:56:02 > N?i chunk th? i = 48
+22/10/2013 23:56:02 > N?i chunk th? i = 47
+22/10/2013 23:56:02 > N?i chunk th? i = 46
+22/10/2013 23:56:02 > N?i chunk th? i = 45
+22/10/2013 23:56:02 > N?i chunk th? i = 44
+22/10/2013 23:56:02 > N?i chunk th? i = 43
+22/10/2013 23:56:02 > N?i chunk th? i = 42
+22/10/2013 23:56:02 > N?i chunk th? i = 41
+22/10/2013 23:56:02 > N?i chunk th? i = 40
+22/10/2013 23:56:02 > N?i chunk th? i = 39
+22/10/2013 23:56:02 > N?i chunk th? i = 38
+22/10/2013 23:56:02 > N?i chunk th? i = 37
+22/10/2013 23:56:02 > N?i chunk th? i = 36
+22/10/2013 23:56:02 > N?i chunk th? i = 35
+22/10/2013 23:56:02 > N?i chunk th? i = 34
+22/10/2013 23:56:02 > N?i chunk th? i = 33
+22/10/2013 23:56:02 > N?i chunk th? i = 32
+22/10/2013 23:56:02 > N?i chunk th? i = 31
+22/10/2013 23:56:02 > N?i chunk th? i = 30
+22/10/2013 23:56:02 > N?i chunk th? i = 29
+22/10/2013 23:56:02 > N?i chunk th? i = 28
+22/10/2013 23:56:02 > N?i chunk th? i = 27
+22/10/2013 23:56:02 > N?i chunk th? i = 26
+22/10/2013 23:56:02 > N?i chunk th? i = 25
+22/10/2013 23:56:02 > N?i chunk th? i = 24
+22/10/2013 23:56:02 > N?i chunk th? i = 23
+22/10/2013 23:56:02 > N?i chunk th? i = 22
+22/10/2013 23:56:02 > N?i chunk th? i = 21
+22/10/2013 23:56:02 > N?i chunk th? i = 20
+22/10/2013 23:56:02 > N?i chunk th? i = 19
+22/10/2013 23:56:02 > N?i chunk th? i = 18
+22/10/2013 23:56:02 > N?i chunk th? i = 17
+22/10/2013 23:56:02 > N?i chunk th? i = 16
+22/10/2013 23:56:02 > N?i chunk th? i = 15
+22/10/2013 23:56:02 > N?i chunk th? i = 14
+22/10/2013 23:56:02 > N?i chunk th? i = 13
+22/10/2013 23:56:02 > N?i chunk th? i = 12
+22/10/2013 23:56:02 > N?i chunk th? i = 11
+22/10/2013 23:56:02 > N?i chunk th? i = 10
+22/10/2013 23:56:02 > N?i chunk th? i = 9
+22/10/2013 23:56:02 > N?i chunk th? i = 8
+22/10/2013 23:56:02 > N?i chunk th? i = 7
+22/10/2013 23:56:02 > N?i chunk th? i = 6
+22/10/2013 23:56:02 > N?i chunk th? i = 5
+22/10/2013 23:56:02 > N?i chunk th? i = 4
+22/10/2013 23:56:02 > N?i chunk th? i = 3
+22/10/2013 23:56:02 > N?i chunk th? i = 2
+22/10/2013 23:56:02 > N?i chunk th? i = 1
+22/10/2013 23:56:02 > N?i chunk th? i = 0
+22/10/2013 23:56:02 > B?t ??u n?i t?p tin
+22/10/2013 23:56:02 > ?� t?o CustomEventListener. T?o CustomEventObject
+22/10/2013 23:56:02 > Ki?m tra c� t?o CustomEventListener ch?a?
+22/10/2013 23:56:02 > ??c s? chunk: 72
+22/10/2013 23:56:02 > T?o m?i th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\Khoc Tham.mp4
+22/10/2013 23:56:02 > Th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\Khoc Tham.mp4 kh�ng t?n t?i
+22/10/2013 23:56:02 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\Khoc Tham.mp4
+22/10/2013 23:56:02 > #BEGIN NoiFile(): Khoc Tham.mp4
+22/10/2013 23:55:59 > @N?i t?p tin: M? t?p tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\torrent\Khoc Tham.mp4.torrent
+22/10/2013 23:55:45 > #END Catfile()
+22/10/2013 23:55:45 > C?t th�nh c�ng 72/72 chunks
+22/10/2013 23:55:45 > C?t chunk th? i = 71
+22/10/2013 23:55:45 > C?t chunk th? i = 70
+22/10/2013 23:55:45 > C?t chunk th? i = 69
+22/10/2013 23:55:45 > C?t chunk th? i = 68
+22/10/2013 23:55:45 > C?t chunk th? i = 67
+22/10/2013 23:55:45 > C?t chunk th? i = 66
+22/10/2013 23:55:45 > C?t chunk th? i = 65
+22/10/2013 23:55:45 > C?t chunk th? i = 64
+22/10/2013 23:55:45 > C?t chunk th? i = 63
+22/10/2013 23:55:45 > C?t chunk th? i = 62
+22/10/2013 23:55:45 > C?t chunk th? i = 61
+22/10/2013 23:55:45 > C?t chunk th? i = 60
+22/10/2013 23:55:45 > C?t chunk th? i = 59
+22/10/2013 23:55:45 > C?t chunk th? i = 58
+22/10/2013 23:55:45 > C?t chunk th? i = 57
+22/10/2013 23:55:45 > C?t chunk th? i = 56
+22/10/2013 23:55:45 > C?t chunk th? i = 55
+22/10/2013 23:55:45 > C?t chunk th? i = 54
+22/10/2013 23:55:45 > C?t chunk th? i = 53
+22/10/2013 23:55:45 > C?t chunk th? i = 52
+22/10/2013 23:55:45 > C?t chunk th? i = 51
+22/10/2013 23:55:45 > C?t chunk th? i = 50
+22/10/2013 23:55:45 > C?t chunk th? i = 49
+22/10/2013 23:55:45 > C?t chunk th? i = 48
+22/10/2013 23:55:45 > C?t chunk th? i = 47
+22/10/2013 23:55:45 > C?t chunk th? i = 46
+22/10/2013 23:55:45 > C?t chunk th? i = 45
+22/10/2013 23:55:45 > C?t chunk th? i = 44
+22/10/2013 23:55:45 > C?t chunk th? i = 43
+22/10/2013 23:55:45 > C?t chunk th? i = 42
+22/10/2013 23:55:45 > C?t chunk th? i = 41
+22/10/2013 23:55:45 > C?t chunk th? i = 40
+22/10/2013 23:55:45 > C?t chunk th? i = 39
+22/10/2013 23:55:45 > C?t chunk th? i = 38
+22/10/2013 23:55:45 > C?t chunk th? i = 37
+22/10/2013 23:55:45 > C?t chunk th? i = 36
+22/10/2013 23:55:45 > C?t chunk th? i = 35
+22/10/2013 23:55:45 > C?t chunk th? i = 34
+22/10/2013 23:55:45 > C?t chunk th? i = 33
+22/10/2013 23:55:45 > C?t chunk th? i = 32
+22/10/2013 23:55:45 > C?t chunk th? i = 31
+22/10/2013 23:55:45 > C?t chunk th? i = 30
+22/10/2013 23:55:45 > C?t chunk th? i = 29
+22/10/2013 23:55:44 > C?t chunk th? i = 28
+22/10/2013 23:55:44 > C?t chunk th? i = 27
+22/10/2013 23:55:44 > C?t chunk th? i = 26
+22/10/2013 23:55:44 > C?t chunk th? i = 25
+22/10/2013 23:55:44 > C?t chunk th? i = 24
+22/10/2013 23:55:44 > C?t chunk th? i = 23
+22/10/2013 23:55:44 > C?t chunk th? i = 22
+22/10/2013 23:55:44 > C?t chunk th? i = 21
+22/10/2013 23:55:44 > C?t chunk th? i = 20
+22/10/2013 23:55:44 > C?t chunk th? i = 19
+22/10/2013 23:55:44 > C?t chunk th? i = 18
+22/10/2013 23:55:44 > C?t chunk th? i = 17
+22/10/2013 23:55:44 > C?t chunk th? i = 16
+22/10/2013 23:55:44 > C?t chunk th? i = 15
+22/10/2013 23:55:44 > C?t chunk th? i = 14
+22/10/2013 23:55:44 > C?t chunk th? i = 13
+22/10/2013 23:55:44 > C?t chunk th? i = 12
+22/10/2013 23:55:44 > C?t chunk th? i = 11
+22/10/2013 23:55:44 > C?t chunk th? i = 10
+22/10/2013 23:55:44 > C?t chunk th? i = 9
+22/10/2013 23:55:44 > C?t chunk th? i = 8
+22/10/2013 23:55:44 > C?t chunk th? i = 7
+22/10/2013 23:55:44 > C?t chunk th? i = 6
+22/10/2013 23:55:44 > C?t chunk th? i = 5
+22/10/2013 23:55:44 > C?t chunk th? i = 4
+22/10/2013 23:55:44 > C?t chunk th? i = 3
+22/10/2013 23:55:44 > C?t chunk th? i = 2
+22/10/2013 23:55:44 > C?t chunk th? i = 1
+22/10/2013 23:55:44 > C?t chunk th? i = 0
+22/10/2013 23:55:44 > B?t ??u c?t t?p tin
+22/10/2013 23:55:44 > ?� t?o CustomEventListener. T?o CustomEventObject
+22/10/2013 23:55:44 > Ki?m tra c� t?o CustomEventListener ch?a?
+22/10/2013 23:55:44 > Ghi s? l??ng chunk s? c?t: 72
+22/10/2013 23:55:44 > ??m s? l??ng chunk s? c?t
+22/10/2013 23:55:44 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\torrent
+22/10/2013 23:55:44 > T?o m?i th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\Chunk\Khoc Tham.mp4
+22/10/2013 23:55:44 > Th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\Chunk\Khoc Tham.mp4 kh�ng t?n t?i
+22/10/2013 23:55:44 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\Chunk\Khoc Tham.mp4
+22/10/2013 23:55:44 > #BEGIN Catfile(): Khoc Tham.mp4
+22/10/2013 23:55:37 > @C?t t?p tin: M? t?p tin C:\Users\Duong Dieu Phap\Downloads\Video\Khoc Tham.mp4
+22/10/2013 23:55:07 > #START_PROGRAM-----------------------------------------------------
+22/10/2013 23:54:17 > #END_PROGRAM-------------------------------------------------------
+22/10/2013 23:54:07 > #START_PROGRAM-----------------------------------------------------
+22/10/2013 23:53:04 > #END_PROGRAM-------------------------------------------------------
+22/10/2013 23:52:48 > #END Noifile()
+22/10/2013 23:52:48 > N?i th�nh c�ng ghepfile/npp.6.4.5.Installer.exe/npp.6.4.5.Installer.exe
+22/10/2013 23:52:48 > N?i chunk th? i = 14
+22/10/2013 23:52:48 > N?i chunk th? i = 13
+22/10/2013 23:52:48 > N?i chunk th? i = 12
+22/10/2013 23:52:48 > N?i chunk th? i = 11
+22/10/2013 23:52:48 > N?i chunk th? i = 10
+22/10/2013 23:52:48 > N?i chunk th? i = 9
+22/10/2013 23:52:48 > N?i chunk th? i = 8
+22/10/2013 23:52:48 > N?i chunk th? i = 7
+22/10/2013 23:52:48 > N?i chunk th? i = 6
+22/10/2013 23:52:48 > N?i chunk th? i = 5
+22/10/2013 23:52:48 > N?i chunk th? i = 4
+22/10/2013 23:52:48 > N?i chunk th? i = 3
+22/10/2013 23:52:48 > N?i chunk th? i = 2
+22/10/2013 23:52:48 > N?i chunk th? i = 1
+22/10/2013 23:52:48 > N?i chunk th? i = 0
+22/10/2013 23:52:48 > B?t ??u n?i t?p tin
+22/10/2013 23:52:48 > ?� t?o CustomEventListener. T?o CustomEventObject
+22/10/2013 23:52:48 > Ki?m tra c� t?o CustomEventListener ch?a?
+22/10/2013 23:52:48 > ??c s? chunk: 15
+22/10/2013 23:52:48 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\npp.6.4.5.Installer.exe
+22/10/2013 23:52:48 > #BEGIN NoiFile(): npp.6.4.5.Installer.exe
+22/10/2013 23:52:47 > #END Noifile()
+22/10/2013 23:52:47 > N?i th�nh c�ng ghepfile/npp.6.4.5.Installer.exe/npp.6.4.5.Installer.exe
+22/10/2013 23:52:47 > N?i chunk th? i = 14
+22/10/2013 23:52:47 > N?i chunk th? i = 13
+22/10/2013 23:52:47 > N?i chunk th? i = 12
+22/10/2013 23:52:47 > N?i chunk th? i = 11
+22/10/2013 23:52:47 > N?i chunk th? i = 10
+22/10/2013 23:52:47 > N?i chunk th? i = 9
+22/10/2013 23:52:47 > N?i chunk th? i = 8
+22/10/2013 23:52:47 > N?i chunk th? i = 7
+22/10/2013 23:52:47 > N?i chunk th? i = 6
+22/10/2013 23:52:47 > N?i chunk th? i = 5
+22/10/2013 23:52:47 > N?i chunk th? i = 4
+22/10/2013 23:52:47 > N?i chunk th? i = 3
+22/10/2013 23:52:47 > N?i chunk th? i = 2
+22/10/2013 23:52:47 > N?i chunk th? i = 1
+22/10/2013 23:52:47 > N?i chunk th? i = 0
+22/10/2013 23:52:47 > B?t ??u n?i t?p tin
+22/10/2013 23:52:47 > ?� t?o CustomEventListener. T?o CustomEventObject
+22/10/2013 23:52:47 > Ki?m tra c� t?o CustomEventListener ch?a?
+22/10/2013 23:52:47 > ??c s? chunk: 15
+22/10/2013 23:52:47 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\npp.6.4.5.Installer.exe
+22/10/2013 23:52:47 > #BEGIN NoiFile(): npp.6.4.5.Installer.exe
+22/10/2013 23:52:46 > #END Noifile()
+22/10/2013 23:52:46 > N?i th�nh c�ng ghepfile/npp.6.4.5.Installer.exe/npp.6.4.5.Installer.exe
+22/10/2013 23:52:46 > N?i chunk th? i = 14
+22/10/2013 23:52:46 > N?i chunk th? i = 13
+22/10/2013 23:52:46 > N?i chunk th? i = 12
+22/10/2013 23:52:46 > N?i chunk th? i = 11
+22/10/2013 23:52:46 > N?i chunk th? i = 10
+22/10/2013 23:52:46 > N?i chunk th? i = 9
+22/10/2013 23:52:46 > N?i chunk th? i = 8
+22/10/2013 23:52:46 > N?i chunk th? i = 7
+22/10/2013 23:52:46 > N?i chunk th? i = 6
+22/10/2013 23:52:46 > N?i chunk th? i = 5
+22/10/2013 23:52:46 > N?i chunk th? i = 4
+22/10/2013 23:52:46 > N?i chunk th? i = 3
+22/10/2013 23:52:46 > N?i chunk th? i = 2
+22/10/2013 23:52:46 > N?i chunk th? i = 1
+22/10/2013 23:52:46 > N?i chunk th? i = 0
+22/10/2013 23:52:46 > B?t ??u n?i t?p tin
+22/10/2013 23:52:46 > ?� t?o CustomEventListener. T?o CustomEventObject
+22/10/2013 23:52:46 > Ki?m tra c� t?o CustomEventListener ch?a?
+22/10/2013 23:52:46 > ??c s? chunk: 15
+22/10/2013 23:52:46 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\npp.6.4.5.Installer.exe
+22/10/2013 23:52:46 > #BEGIN NoiFile(): npp.6.4.5.Installer.exe
+22/10/2013 23:52:42 > #END Noifile()
+22/10/2013 23:52:42 > N?i th�nh c�ng ghepfile/npp.6.4.5.Installer.exe/npp.6.4.5.Installer.exe
+22/10/2013 23:52:42 > N?i chunk th? i = 14
+22/10/2013 23:52:42 > N?i chunk th? i = 13
+22/10/2013 23:52:42 > N?i chunk th? i = 12
+22/10/2013 23:52:42 > N?i chunk th? i = 11
+22/10/2013 23:52:42 > N?i chunk th? i = 10
+22/10/2013 23:52:42 > N?i chunk th? i = 9
+22/10/2013 23:52:42 > N?i chunk th? i = 8
+22/10/2013 23:52:42 > N?i chunk th? i = 7
+22/10/2013 23:52:42 > N?i chunk th? i = 6
+22/10/2013 23:52:42 > N?i chunk th? i = 5
+22/10/2013 23:52:42 > N?i chunk th? i = 4
+22/10/2013 23:52:42 > N?i chunk th? i = 3
+22/10/2013 23:52:42 > N?i chunk th? i = 2
+22/10/2013 23:52:42 > N?i chunk th? i = 1
+22/10/2013 23:52:42 > N?i chunk th? i = 0
+22/10/2013 23:52:42 > B?t ??u n?i t?p tin
+22/10/2013 23:52:42 > ?� t?o CustomEventListener. T?o CustomEventObject
+22/10/2013 23:52:42 > Ki?m tra c� t?o CustomEventListener ch?a?
+22/10/2013 23:52:42 > ??c s? chunk: 15
+22/10/2013 23:52:42 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\npp.6.4.5.Installer.exe
+22/10/2013 23:52:42 > #BEGIN NoiFile(): npp.6.4.5.Installer.exe
+22/10/2013 23:52:40 > #END Noifile()
+22/10/2013 23:52:40 > N?i th�nh c�ng ghepfile/npp.6.4.5.Installer.exe/npp.6.4.5.Installer.exe
+22/10/2013 23:52:40 > N?i chunk th? i = 14
+22/10/2013 23:52:40 > N?i chunk th? i = 13
+22/10/2013 23:52:40 > N?i chunk th? i = 12
+22/10/2013 23:52:40 > N?i chunk th? i = 11
+22/10/2013 23:52:40 > N?i chunk th? i = 10
+22/10/2013 23:52:40 > N?i chunk th? i = 9
+22/10/2013 23:52:40 > N?i chunk th? i = 8
+22/10/2013 23:52:40 > N?i chunk th? i = 7
+22/10/2013 23:52:40 > N?i chunk th? i = 6
+22/10/2013 23:52:40 > N?i chunk th? i = 5
+22/10/2013 23:52:40 > N?i chunk th? i = 4
+22/10/2013 23:52:40 > N?i chunk th? i = 3
+22/10/2013 23:52:40 > N?i chunk th? i = 2
+22/10/2013 23:52:40 > N?i chunk th? i = 1
+22/10/2013 23:52:40 > N?i chunk th? i = 0
+22/10/2013 23:52:40 > B?t ??u n?i t?p tin
+22/10/2013 23:52:40 > ?� t?o CustomEventListener. T?o CustomEventObject
+22/10/2013 23:52:40 > Ki?m tra c� t?o CustomEventListener ch?a?
+22/10/2013 23:52:40 > ??c s? chunk: 15
+22/10/2013 23:52:40 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\npp.6.4.5.Installer.exe
+22/10/2013 23:52:40 > #BEGIN NoiFile(): npp.6.4.5.Installer.exe
+22/10/2013 23:52:39 > #END Noifile()
+22/10/2013 23:52:39 > N?i th�nh c�ng ghepfile/npp.6.4.5.Installer.exe/npp.6.4.5.Installer.exe
+22/10/2013 23:52:39 > N?i chunk th? i = 14
+22/10/2013 23:52:39 > N?i chunk th? i = 13
+22/10/2013 23:52:39 > N?i chunk th? i = 12
+22/10/2013 23:52:39 > N?i chunk th? i = 11
+22/10/2013 23:52:39 > N?i chunk th? i = 10
+22/10/2013 23:52:39 > N?i chunk th? i = 9
+22/10/2013 23:52:39 > N?i chunk th? i = 8
+22/10/2013 23:52:39 > N?i chunk th? i = 7
+22/10/2013 23:52:39 > N?i chunk th? i = 6
+22/10/2013 23:52:39 > N?i chunk th? i = 5
+22/10/2013 23:52:39 > N?i chunk th? i = 4
+22/10/2013 23:52:39 > N?i chunk th? i = 3
+22/10/2013 23:52:39 > N?i chunk th? i = 2
+22/10/2013 23:52:39 > N?i chunk th? i = 1
+22/10/2013 23:52:39 > N?i chunk th? i = 0
+22/10/2013 23:52:39 > B?t ??u n?i t?p tin
+22/10/2013 23:52:39 > ?� t?o CustomEventListener. T?o CustomEventObject
+22/10/2013 23:52:39 > Ki?m tra c� t?o CustomEventListener ch?a?
+22/10/2013 23:52:39 > ??c s? chunk: 15
+22/10/2013 23:52:39 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\npp.6.4.5.Installer.exe
+22/10/2013 23:52:39 > #BEGIN NoiFile(): npp.6.4.5.Installer.exe
+22/10/2013 23:52:32 > #END Noifile()
+22/10/2013 23:52:32 > N?i th�nh c�ng ghepfile/npp.6.4.5.Installer.exe/npp.6.4.5.Installer.exe
+22/10/2013 23:52:32 > N?i chunk th? i = 14
+22/10/2013 23:52:32 > N?i chunk th? i = 13
+22/10/2013 23:52:32 > N?i chunk th? i = 12
+22/10/2013 23:52:32 > N?i chunk th? i = 11
+22/10/2013 23:52:32 > N?i chunk th? i = 10
+22/10/2013 23:52:32 > N?i chunk th? i = 9
+22/10/2013 23:52:32 > N?i chunk th? i = 8
+22/10/2013 23:52:32 > N?i chunk th? i = 7
+22/10/2013 23:52:32 > N?i chunk th? i = 6
+22/10/2013 23:52:32 > N?i chunk th? i = 5
+22/10/2013 23:52:32 > N?i chunk th? i = 4
+22/10/2013 23:52:32 > N?i chunk th? i = 3
+22/10/2013 23:52:32 > N?i chunk th? i = 2
+22/10/2013 23:52:32 > N?i chunk th? i = 1
+22/10/2013 23:52:32 > N?i chunk th? i = 0
+22/10/2013 23:52:32 > B?t ??u n?i t?p tin
+22/10/2013 23:52:32 > ?� t?o CustomEventListener. T?o CustomEventObject
+22/10/2013 23:52:32 > Ki?m tra c� t?o CustomEventListener ch?a?
+22/10/2013 23:52:32 > ??c s? chunk: 15
+22/10/2013 23:52:32 > T?o m?i th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\npp.6.4.5.Installer.exe
+22/10/2013 23:52:32 > Th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\npp.6.4.5.Installer.exe kh�ng t?n t?i
+22/10/2013 23:52:32 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\ghepfile\npp.6.4.5.Installer.exe
+22/10/2013 23:52:32 > #BEGIN NoiFile(): npp.6.4.5.Installer.exe
+22/10/2013 23:52:30 > @N?i t?p tin: M? t?p tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\torrent\npp.6.4.5.Installer.exe.torrent
+22/10/2013 23:52:04 > #END Catfile()
+22/10/2013 23:52:04 > C?t th�nh c�ng 15/15 chunks
+22/10/2013 23:52:04 > C?t chunk th? i = 14
+22/10/2013 23:52:04 > C?t chunk th? i = 13
+22/10/2013 23:52:04 > C?t chunk th? i = 12
+22/10/2013 23:52:04 > C?t chunk th? i = 11
+22/10/2013 23:52:04 > C?t chunk th? i = 10
+22/10/2013 23:52:04 > C?t chunk th? i = 9
+22/10/2013 23:52:04 > C?t chunk th? i = 8
+22/10/2013 23:52:04 > C?t chunk th? i = 7
+22/10/2013 23:52:04 > C?t chunk th? i = 6
+22/10/2013 23:52:04 > C?t chunk th? i = 5
+22/10/2013 23:52:04 > C?t chunk th? i = 4
+22/10/2013 23:52:04 > C?t chunk th? i = 3
+22/10/2013 23:52:04 > C?t chunk th? i = 2
+22/10/2013 23:52:04 > C?t chunk th? i = 1
+22/10/2013 23:52:04 > C?t chunk th? i = 0
+22/10/2013 23:52:04 > B?t ??u c?t t?p tin
+22/10/2013 23:52:04 > ?� t?o CustomEventListener. T?o CustomEventObject
+22/10/2013 23:52:04 > Ki?m tra c� t?o CustomEventListener ch?a?
+22/10/2013 23:52:04 > Ghi s? l??ng chunk s? c?t: 15
+22/10/2013 23:52:04 > ??m s? l??ng chunk s? c?t
+22/10/2013 23:52:04 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\torrent
+22/10/2013 23:52:04 > T?o m?i th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\Chunk\npp.6.4.5.Installer.exe
+22/10/2013 23:52:04 > Th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\Chunk\npp.6.4.5.Installer.exe kh�ng t?n t?i
+22/10/2013 23:52:04 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\Chunk\npp.6.4.5.Installer.exe
+22/10/2013 23:52:04 > #BEGIN Catfile(): npp.6.4.5.Installer.exe
+22/10/2013 23:52:02 > @C?t t?p tin: M? t?p tin C:\Users\Duong Dieu Phap\Downloads\Programs\npp.6.4.5.Installer.exe
+22/10/2013 23:51:46 > @C?t t?p tin: M? t?p tin C:\Users\Duong Dieu Phap\Downloads\Programs\foobar2000_v1.2.9.exe
+22/10/2013 23:51:19 > #START_PROGRAM-----------------------------------------------------
+22/10/2013 23:44:08 > #END_PROGRAM-------------------------------------------------------
+22/10/2013 23:43:49 > #START_PROGRAM-----------------------------------------------------
+22/10/2013 23:21:19 > #END_PROGRAM-------------------------------------------------------
+22/10/2013 23:21:08 > #START_PROGRAM-----------------------------------------------------
+22/10/2013 23:20:02 > #END_PROGRAM-------------------------------------------------------
+22/10/2013 23:19:54 > #START_PROGRAM-----------------------------------------------------
+22/10/2013 23:08:03 > #END_PROGRAM-------------------------------------------------------
+22/10/2013 23:06:21 > @T?i torrent: M? t?p tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\torrent\ConnectifyInstaller.exe.torrent
+22/10/2013 23:03:39 > #END Catfile()
+22/10/2013 23:03:39 > C?t th�nh c�ng 14/14 chunks
+22/10/2013 23:03:39 > C?t chunk th? i = 13
+22/10/2013 23:03:39 > C?t chunk th? i = 12
+22/10/2013 23:03:39 > C?t chunk th? i = 11
+22/10/2013 23:03:39 > C?t chunk th? i = 10
+22/10/2013 23:03:39 > C?t chunk th? i = 9
+22/10/2013 23:03:39 > C?t chunk th? i = 8
+22/10/2013 23:03:39 > C?t chunk th? i = 7
+22/10/2013 23:03:39 > C?t chunk th? i = 6
+22/10/2013 23:03:39 > C?t chunk th? i = 5
+22/10/2013 23:03:39 > C?t chunk th? i = 4
+22/10/2013 23:03:39 > C?t chunk th? i = 3
+22/10/2013 23:03:39 > C?t chunk th? i = 2
+22/10/2013 23:03:39 > C?t chunk th? i = 1
+22/10/2013 23:03:39 > C?t chunk th? i = 0
+22/10/2013 23:03:39 > B?t ??u c?t t?p tin
+22/10/2013 23:03:39 > ?� t?o CustomEventListener. T?o CustomEventObject
+22/10/2013 23:03:39 > Ki?m tra c� t?o CustomEventListener ch?a?
+22/10/2013 23:03:39 > Ghi s? l??ng chunk s? c?t: 14
+22/10/2013 23:03:39 > ??m s? l??ng chunk s? c?t
+22/10/2013 23:03:39 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\torrent
+22/10/2013 23:03:39 > T?o m?i th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\Chunk\ConnectifyInstaller.exe
+22/10/2013 23:03:39 > Th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\Chunk\ConnectifyInstaller.exe kh�ng t?n t?i
+22/10/2013 23:03:39 > B?t ??u ki?m tra th? m?c F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\.\Chunk\ConnectifyInstaller.exe
+22/10/2013 23:03:39 > #BEGIN Catfile(): ConnectifyInstaller.exe
+22/10/2013 23:03:35 > @C?t t?p tin: M? t?p tin C:\Users\Duong Dieu Phap\Downloads\Programs\ConnectifyInstaller.exe
+22/10/2013 23:02:50 > #START_PROGRAM-----------------------------------------------------
+22/10/2013 23:00:58 > @T?i torrent: M? t?p tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\torrent\ImageGlass_1.5.22.2013.exe.torrent
+22/10/2013 23:00:48 > #START_PROGRAM-----------------------------------------------------
+22/10/2013 23:00:31 > #END_PROGRAM-------------------------------------------------------
+22/10/2013 23:00:08 > @T?i torrent: M? t?p tin F:\Hoc tap\Hoan chinh\HK2\Mang may tinh nang cao\Thuc hanh\Do an\Bittorrent\Source\torrent\ImageGlass_1.5.22.2013.exe.torrent
+22/10/2013 22:59:52 > #START_PROGRAM-----------------------------------------------------
