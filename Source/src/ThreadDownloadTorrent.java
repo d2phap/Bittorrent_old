@@ -1,10 +1,14 @@
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.EventListener;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this template, choose Tools | Templates
@@ -14,13 +18,15 @@ import java.util.Vector;
  *
  * @author Duong Dieu Phap
  */
-public class DownloadTorrent extends Thread implements EventListener {
+public class ThreadDownloadTorrent extends Thread implements EventListener {
 
     private transient Vector listeners;
     private volatile boolean isRunning = true;
     private int numberFinished = 0;
+    private int sochunk = 0;
     public File torrentFile = null;
     public peerinfo peer = null;
+    private List<ThreadDownloadChunk> listThreadDownload = new ArrayList<>();
 
     public void run() {
         StartDownload();
@@ -47,12 +53,24 @@ public class DownloadTorrent extends Thread implements EventListener {
     }
 
     /**
-     * Tạm dừng tiesn trình
+     * Tạm dừng tiến trình
      *
      * @throws InterruptedException
      */
     public void pauseThread() throws InterruptedException {
         isRunning = false;
+        
+        //Tam dung tat ca tien trinh download chunk
+        for (int j = 0; j < listThreadDownload.size(); j++) 
+        {
+            try 
+            {
+                listThreadDownload.get(j).pauseThread();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ThreadDownloadTorrent.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
     }
 
     /**
@@ -60,6 +78,12 @@ public class DownloadTorrent extends Thread implements EventListener {
      */
     public void resumeThread() {
         isRunning = true;
+        
+        //Phuc hoi cac tien trinh download chunk
+        for (int j = 0; j < listThreadDownload.size(); j++) 
+        {
+            listThreadDownload.get(j).resumeThread();
+        }
     }
 
     private void StartDownload() {
@@ -69,7 +93,7 @@ public class DownloadTorrent extends Thread implements EventListener {
         }
 
         FileInputStream fin = null;
-        int sochunk = 0;
+        sochunk = 0;
         try {
             fin = new FileInputStream(torrentFile);
             Scanner input = new Scanner(fin);
@@ -109,20 +133,18 @@ public class DownloadTorrent extends Thread implements EventListener {
                 l.onStart(event);
             }
             
+            //Danh sach cac thread download chunk
+            //Nham quan ly viec tam dung download
+            listThreadDownload = new ArrayList<>();
             
-            DownloadChunk down;
+            //Lan luot tap thread de tai cac chunk dong thoi
             for (int i = 0; i < sochunk; i++) {
                 
-                //Tạm dừng nếu nhận lệnh isRunning = false
-                while (!isRunning) {
-                    //Lặp cho đến khi nhận được lệnh isRunning = true
-                }
-                
                 File f = new File(ThongTinChunk.ddmacdinh + ten + "/" + ten + "_" + (i + 1 + ".chunk"));
-                if (!f.exists()) {
+                if (!f.exists()) { //Neu tap tin chunk ko ton tai thi download về
                     
                     // lúc này yêu cầu gửi
-                    down = new DownloadChunk();
+                    ThreadDownloadChunk down = new ThreadDownloadChunk();
                     down.file = fi;
                     down.peer = peer;
                     down.thuTuChunk = i + 1;
@@ -148,20 +170,48 @@ public class DownloadTorrent extends Thread implements EventListener {
                                 CustomEventListener l = (CustomEventListener) ev.nextElement();
                                 l.onOccur(event);
                             }
+                            
+                            
+                            if(numberFinished == sochunk)
+                            {
+                                //Phát sinh sự kiện FINISH
+                                Enumeration ev2 = targets.elements();
+                                while (ev2.hasMoreElements()) {
+                                    CustomEventListener l = (CustomEventListener) ev2.nextElement();
+                                    l.onFinish(event);
+                                }
+                            }
                         }
                     });
                     
+                    listThreadDownload.add(down);
+                    
                     down.start();
                 }
-            }
-            
-            
-            //Phát sinh sự kiện FINISH
-            e = targets.elements();
-            while (e.hasMoreElements()) {
-                CustomEventListener l = (CustomEventListener) e.nextElement();
-                l.onFinish(event);
-            }
+                else
+                {
+                    //Neu tap tin chunk đã tồn tại thì tăng kq
+                    numberFinished++;
+                    
+                    //Phát sinh sự kiện OCCUR
+                    event._value = numberFinished;
+                    event._object1 = fi.getTenfile();
+                    Enumeration ev = targets.elements();
+                    while (ev.hasMoreElements()) {
+                        CustomEventListener l = (CustomEventListener) ev.nextElement();
+                        l.onOccur(event);
+                    }
+                    
+                    if (numberFinished == sochunk) {
+                        //Phát sinh sự kiện FINISH
+                        Enumeration ev2 = targets.elements();
+                        while (ev2.hasMoreElements()) {
+                            CustomEventListener l = (CustomEventListener) ev2.nextElement();
+                            l.onFinish(event);
+                        }
+                    }
+                }//end if file có tồn tại ko?
+            }//end for
             
         }//end if
 

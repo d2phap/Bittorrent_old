@@ -77,6 +77,7 @@ public class LogFile {
             }
             _dsLines.add(0, thoigian + text);
             
+            
             //Ghi nội dung file log
             FileWriter writer = new FileWriter(f);
             

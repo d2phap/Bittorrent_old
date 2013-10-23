@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  *
  * @author OPTIMUS dùng để yêu cầu startDownload 1 chunk
  */
-public class DownloadChunk extends Thread {
+public class ThreadDownloadChunk extends Thread {
 
     public ThongTinTapTin file;
     public peerinfo peer;
@@ -58,11 +58,6 @@ public class DownloadChunk extends Thread {
 
                 for (int i = 0; i < peer.countlspeer(); i++) {
 
-                    //Tạm dừng nếu nhận lệnh isRunning = false
-                    while (!isRunning) {
-                        //Lặp cho đến khi nhận được lệnh isRunning = true
-                    }
-
                     try {
                         buffer = new byte[1024];
 
@@ -91,9 +86,14 @@ public class DownloadChunk extends Thread {
                             int n = 0; // số lần startDownload
                             int size = 0;
 
-
+                            
                             while (rc.compareTo("END") != 0) {
-
+                                
+                                //Tạm dừng nếu nhận lệnh isRunning = false
+                                while (!isRunning) {
+                                    //Lặp cho đến khi nhận được lệnh isRunning = true
+                                }
+                                
                                 if (rc.compareTo("END") != 0) {
                                     int numbyte = rcvPacket.getData().length;
                                     System.arraycopy(rcvPacket.getData(), 0, data, n * 1024, numbyte);
@@ -120,7 +120,7 @@ public class DownloadChunk extends Thread {
                             
 
                             if (ghi == true) {
-                                //Phát sinh sự kiện OCCUR
+                                //Phát sinh sự kiện FINISH
                                 e = targets.elements();
                                 while (e.hasMoreElements()) {
                                     CustomEventListener l = (CustomEventListener) e.nextElement();
@@ -133,7 +133,7 @@ public class DownloadChunk extends Thread {
                             }
 
                             socket.close();
-
+                            
                         }
 
                     } catch (Exception ex) {

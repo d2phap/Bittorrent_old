@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
  *
  * @author Duong Dieu Phap
  */
-public class NoiFile extends Thread implements EventListener{
+public class ThreadNoiFile extends Thread implements EventListener{
     public ThongTinTapTin fInfo;
     private transient Vector listeners;
 

@@ -32,6 +32,8 @@ public class Bittorent_Like extends javax.swing.JFrame {
     public static listen nghe;
     public static sendrequest gui;
     public static File f;
+    private ThreadDownloadTorrent dlTorrent;
+    private int isPause = 0;
 
     public Bittorent_Like() {
 
@@ -70,8 +72,8 @@ public class Bittorent_Like extends javax.swing.JFrame {
         btnNoiTapTin = new javax.swing.JButton();
         txtTaiTorrent = new javax.swing.JTextField();
         jCboChunk = new javax.swing.JComboBox();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnTaiTatCa = new javax.swing.JButton();
+        btnTaiChunkDangChon = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnThongTin = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -146,15 +148,15 @@ public class Bittorent_Like extends javax.swing.JFrame {
         txtTaiTorrent.setEditable(false);
         txtTaiTorrent.setText("##");
 
-        jButton3.setText("Tải tất cả");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnTaiTatCa.setText("Tải tất cả");
+        btnTaiTatCa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTaiTatCaActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Tải chunk đang chọn");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnTaiChunkDangChon.setText("Tải chunk đang chọn");
+        btnTaiChunkDangChon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTaiChunkActionPerformed(evt);
             }
@@ -221,9 +223,9 @@ public class Bittorent_Like extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jButton5)
+                                        .addComponent(btnTaiChunkDangChon)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(btnTaiTatCa, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jCboChunk, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -273,8 +275,8 @@ public class Bittorent_Like extends javax.swing.JFrame {
                 .addComponent(jCboChunk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton3))
+                    .addComponent(btnTaiChunkDangChon)
+                    .addComponent(btnTaiTatCa))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -307,7 +309,7 @@ public class Bittorent_Like extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         String chunk = jCboChunk.getSelectedItem().toString();
-        DownloadChunk down = new DownloadChunk();
+        ThreadDownloadChunk down = new ThreadDownloadChunk();
         ThongTinTapTin fo = new ThongTinTapTin();
         
         String tenfile = f.getName().substring(0, f.getName().length() - 8); // cắt bỏ đuôi .tottrent
@@ -334,14 +336,41 @@ public class Bittorent_Like extends javax.swing.JFrame {
         if (!torrentFile.exists()) {
             //Tap tin ko ton tai
             JOptionPane.showMessageDialog(new JPanel(), "Lỗi\n\nTập tin torrent không tồn tại!");
-            return;
+            isPause = 0;
+            btnTaiTatCa.setText("Tải tất cả");
         } 
         else 
         {
-            DownloadTorrent down = new DownloadTorrent();
-            down.torrentFile = torrentFile;
-            down.peer = peer;
-            down.addCustomListener(new CustomEventListener() {
+            //IsPause = 0: Khong down
+            //isPause = 1: Dang down
+            //IsPause = 2: Tam Dung
+            if(isPause == 1) //Neu dang download
+            {
+                //Tam dung
+                isPause = 2;
+                try {
+                    dlTorrent.pauseThread();
+                    btnTaiTatCa.setText("Phục hồi");
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Bittorent_Like.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+                return;
+            }
+            else if(isPause == 2) //Neu dang Tam Dung
+            {
+                //Thi down tiep
+                isPause = 1;
+                dlTorrent.resumeThread();
+                btnTaiTatCa.setText("Tạm dừng");
+                
+                return;
+            }
+            
+            dlTorrent = new ThreadDownloadTorrent();
+            dlTorrent.torrentFile = torrentFile;
+            dlTorrent.peer = peer;
+            dlTorrent.addCustomListener(new CustomEventListener() {
 
                 @Override
                 public void onStart(CustomEventObject e) {
@@ -349,6 +378,8 @@ public class Bittorent_Like extends javax.swing.JFrame {
                     progStatus.setMinimum(e._min);
                     progStatus.setValue(0);
                     lblStatus.setText("");
+                    isPause = 1;
+                    btnTaiTatCa.setText("Tạm dừng");
                 }
 
                 @Override
@@ -364,102 +395,15 @@ public class Bittorent_Like extends javax.swing.JFrame {
                 @Override
                 public void onFinish(CustomEventObject e) {
                     lblStatus.setText("Tải hoàn tất.");
+                    isPause = 0;
+                    btnTaiTatCa.setText("Tải tất cả");
                 }
             });
             
-            down.start();
+            dlTorrent.start();
             
-            /*
-            FileInputStream in = null;
-            int sochunk = 0;
-            try {
-                in = new FileInputStream(torrentFile);
-                Scanner input = new Scanner(in);
-                sochunk = input.nextInt();
-            } catch (Exception ex) {
-                ex.printStackTrace();
-                //JOptionPane.showMessageDialog(new JPanel(), "Lỗi\n\n" + ex.getMessage());
-                return;
-            }
-            
-            String ten = torrentFile.getName();
-            ten = ten.replaceAll(".torrent", "");
-            
-            ThongTinTapTin fi = new ThongTinTapTin();
-            fi.setTenfile(ten);
-            fi.setSochunk(sochunk);
-
-            
-            DownloadChunk down;
-            for (int i = 0; i < sochunk; i++) {
-                File f = new File(ThongTinChunk.ddmacdinh + ten + "/" + ten + "_" + (i + 1 + ".chunk"));
-                if (!f.exists()) {
-                    // lúc này yêu cầu gửi
-                    down = new DownloadChunk();
-                    down.file = fi;
-                    down.peer = peer;
-                    down.thuTuChunk = i + 1;
-                    System.out.println("dang down chunk: " + (i + 1));
-                    down.start();
-                    System.out.println("da down xong chunk: " + (i + 1));
-                }
-            }
-            * 
-            * */
         }
 
-
-
-
-
-
-
-
-
-
-        /*
-         JFileChooser fc = new JFileChooser();
-         fc.setFileFilter(new FileNameExtensionFilter("Torrent file (*.torrent)", "torrent"));
-         fc.setMultiSelectionEnabled(false);
-
-         if (fc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-
-         if (fc.getSelectedFiles() != null) {
-         FileInputStream in = null;
-         int sochunk = 0;
-         try {
-         in = new FileInputStream(fc.getSelectedFile());
-         Scanner input = new Scanner(in);
-         sochunk = input.nextInt();
-         } catch (Exception ex) {
-         ex.printStackTrace();
-         //JOptionPane.showMessageDialog(new JPanel(), "Lỗi\n\n" + ex.getMessage());
-         return;
-         }
-         String ten = fc.getSelectedFile().getName();
-         ten = ten.substring(0, ten.length() - 8);
-         ThongTinTapTin fi = new ThongTinTapTin();
-         fi.setTenfile(ten);
-         fi.setSochunk(sochunk);
-
-         txtCatTapTin.setText(fc.getSelectedFile().getAbsolutePath());
-         DownloadChunk dow;
-         for (int i = 0; i < sochunk; i++) {
-         File f = new File(ThongTinChunk.ddmacdinh + ten + "/" + ten + "_" + (i + 1 + ".chunk"));
-         if (!f.exists()) {
-         // lúc này yêu cầu gửi
-         dow = new DownloadChunk();
-         dow.file = fi;
-         dow.peer = peer;
-         dow.thuTuChunk = i + 1;
-         System.out.println("dang down chunk: " + (i + 1));
-         dow.start();
-         System.out.println("da down xong chunk: " + (i + 1));
-         }
-         }
-         }
-         }
-         * */
 
     }//GEN-LAST:event_btnTaiTatCaActionPerformed
 
@@ -508,8 +452,7 @@ public class Bittorent_Like extends javax.swing.JFrame {
                 ThongTinTapTin fi = new ThongTinTapTin();
                 fi.setTenfile(ten);
                 fi.setSochunk(sochunk);
-
-                txtCatTapTin.setText(fc.getSelectedFile().getAbsolutePath());
+                
                 for (int i = 0; i < sochunk; i++) {
                     File f = new File(ThongTinChunk.ddmacdinh + ten + "/" + ten + "_" + (i + 1 + ".chunk"));
 
@@ -540,7 +483,7 @@ public class Bittorent_Like extends javax.swing.JFrame {
     }//GEN-LAST:event_btnChonCatTapTinActionPerformed
 
     private void btnNoiTapTinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNoiTapTinActionPerformed
-        NoiFile c = new NoiFile();
+        ThreadNoiFile c = new ThreadNoiFile();
         String filename = txtNoiFile.getText().trim();
         File f = new File(filename);
         lblStatus.setText("");
@@ -602,7 +545,7 @@ public class Bittorent_Like extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoiTapTinActionPerformed
 
     private void btnCatTapTinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatTapTinActionPerformed
-        CatFile c = new CatFile();
+        ThreadCatFile c = new ThreadCatFile();
         String tenfile = txtCatTapTin.getText().trim();
         File f = new File(tenfile);
         lblStatus.setText("");
@@ -682,10 +625,10 @@ public class Bittorent_Like extends javax.swing.JFrame {
     private javax.swing.JButton btnCatTapTin;
     private javax.swing.JButton btnChonFileNoi;
     private javax.swing.JButton btnNoiTapTin;
+    private javax.swing.JButton btnTaiChunkDangChon;
+    private javax.swing.JButton btnTaiTatCa;
     private javax.swing.JButton btnThongTin;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox jCboChunk;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

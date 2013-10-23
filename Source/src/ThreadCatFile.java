@@ -19,7 +19,7 @@ import java.util.*;
  *
  * @author OPTIMUS
  */
-public class CatFile extends Thread implements EventListener {
+public class ThreadCatFile extends Thread implements EventListener {
 
     public ThongTinTapTin fi;
     private transient Vector listeners;
@@ -95,7 +95,7 @@ public class CatFile extends Thread implements EventListener {
                 bw.close();
                 fis.close();
             } catch (IOException ex) {
-                Logger.getLogger(CatFile.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ThreadCatFile.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         
