@@ -25,9 +25,10 @@ public class ThreadDownloadTorrent extends Thread implements EventListener {
     private int numberFinished = 0;
     private int sochunk = 0;
     public File torrentFile = null;
-    public peerinfo peer = null;
+    public ThongTinPeer peer = null;
     private List<ThreadDownloadChunk> listThreadDownload = new ArrayList<>();
-
+    private int maxThreadCount = 5;
+    
     public void run() {
         StartDownload();
     }
@@ -140,7 +141,7 @@ public class ThreadDownloadTorrent extends Thread implements EventListener {
             //Lan luot tap thread de tai cac chunk dong thoi
             for (int i = 0; i < sochunk; i++) {
                 
-                File f = new File(ThongTinChunk.ddmacdinh + ten + "/" + ten + "_" + (i + 1 + ".chunk"));
+                File f = new File(ThongTinChunk.duongDanChunk + ten + "/" + ten + "_" + (i + 1 + ".chunk"));
                 if (!f.exists()) { //Neu tap tin chunk ko ton tai thi download về
                     
                     // lúc này yêu cầu gửi
@@ -210,6 +211,8 @@ public class ThreadDownloadTorrent extends Thread implements EventListener {
                             l.onFinish(event);
                         }
                     }
+                    
+                    
                 }//end if file có tồn tại ko?
             }//end for
             

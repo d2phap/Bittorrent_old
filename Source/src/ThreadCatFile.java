@@ -27,7 +27,7 @@ public class ThreadCatFile extends Thread implements EventListener {
     public void Catfile() {
         
         LogFile.Write("#BEGIN Catfile(): " + fi.getTenfile());
-        fi.kiemTraVaTaoThuMuc("./" + ThongTinChunk.ddmacdinh + fi.getTenfile() + "/");
+        fi.kiemTraVaTaoThuMuc("./" + ThongTinChunk.duongDanChunk + fi.getTenfile() + "/");
         fi.kiemTraVaTaoThuMuc("./torrent/");
 
         FileInputStream fis = null;
@@ -62,7 +62,7 @@ public class ThreadCatFile extends Thread implements EventListener {
 
                     System.arraycopy(buffer, 0, newbuffer, 0, readsize);
                     fi.ghichunk(i + 1, newbuffer);
-                    String hash = fi.getHashCode(ThongTinChunk.ddmacdinh + fi.getTenfile() + "/" + fi.getTenfile() + "_" + (i + 1) + ".chunk");
+                    String hash = fi.getHashCode(ThongTinChunk.duongDanChunk + fi.getTenfile() + "/" + fi.getTenfile() + "_" + (i + 1) + ".chunk");
 
                     bw.write((i + 1) + " " + hash + "\r\n");
                     bw.flush();

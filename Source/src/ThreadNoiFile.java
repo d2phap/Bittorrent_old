@@ -31,8 +31,8 @@ public class ThreadNoiFile extends Thread implements EventListener{
         LogFile.Write("#BEGIN NoiFile(): " + tenfile);
         
         try {
-            fInfo.kiemTraVaTaoThuMuc(ThongTinChunk.luufile + tenfile + "/");
-            fo = new FileOutputStream(ThongTinChunk.luufile + tenfile + "/" + tenfile);
+            fInfo.kiemTraVaTaoThuMuc(ThongTinChunk.duongDanLuuChunk + tenfile + "/");
+            fo = new FileOutputStream(ThongTinChunk.duongDanLuuChunk + tenfile + "/" + tenfile);
             buffer = new byte[(int) fInfo.getKichThuocChunk()];
             LogFile.Write("Đọc số chunk: " + fInfo.getSochunk());
             
@@ -52,7 +52,7 @@ public class ThreadNoiFile extends Thread implements EventListener{
                 
                 LogFile.Write("Bắt đầu nối tập tin");
                 for (int i = 0; i < fInfo.getSochunk(); i++) {
-                    fi = new FileInputStream(ThongTinChunk.ddmacdinh + tenfile + "/" + tenfile + "_" + (i + 1) + ".chunk");
+                    fi = new FileInputStream(ThongTinChunk.duongDanChunk + tenfile + "/" + tenfile + "_" + (i + 1) + ".chunk");
                     int readsize = fi.read(buffer);
                     fi.close();
                     fo.write(buffer, 0, readsize);
@@ -77,7 +77,7 @@ public class ThreadNoiFile extends Thread implements EventListener{
                     l.onFinish(event);
                 }
                 
-                LogFile.Write("Nối thành công " + ThongTinChunk.luufile + tenfile + "/" + tenfile);
+                LogFile.Write("Nối thành công " + ThongTinChunk.duongDanLuuChunk + tenfile + "/" + tenfile);
 
             }
         } catch (Exception ex) {

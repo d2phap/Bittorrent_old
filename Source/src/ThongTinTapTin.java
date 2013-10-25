@@ -17,31 +17,31 @@ import javax.swing.JOptionPane;
  * and open the template fi the editor.
  */
 /**
- * Class FileInfo lưu thông tin cơ bản của 1 file khi dow và chia sẻ
+ * Class FileInfo lưu thông tin cơ bản của 1 file khi down và chia sẻ
  *
  * @author OPTIMUS
  */
 public class ThongTinTapTin{
 
-    public static long ktchunk = 512 * 1024;
-    private String tenfile;
-    private long ktfile;
-    private String duongdan;
-    private int sochunk;
+    public static long kichThuocChunk = 512 * 1024;
+    private String tenFile;
+    private long kichThuocFile;
+    private String duongDan;
+    private int soChunk;
     private transient Vector listeners;
 
     /**
-     * @return the ktchunk
+     * @return the kichThuocChunk
      */
     public long getKichThuocChunk() {
-        return ktchunk;
+        return kichThuocChunk;
     }
 
     /**
-     * @param aKtchunk the ktchunk to set
+     * @param aKtchunk the kichThuocChunk to set
      */
     public void setKichThuocChunk(long aKtchunk) {
-        ktchunk = aKtchunk;
+        kichThuocChunk = aKtchunk;
     }
 
     public ThongTinTapTin(String dd) {
@@ -49,66 +49,66 @@ public class ThongTinTapTin{
     }
 
     public String getTenfile() {
-        return tenfile;
+        return tenFile;
     }
 
     /**
      * @param tenfile the tenfile to set
      */
     public void setTenfile(String tenfile) {
-        this.tenfile = tenfile;
+        this.tenFile = tenfile;
     }
 
     /**
      * @return the ktfile
      */
     public long getKichThuocFile() {
-        return ktfile;
+        return kichThuocFile;
     }
 
     /**
      * @param ktfile the ktfile to set
      */
     public void setKichThuocFile(long ktfile) {
-        this.ktfile = ktfile;
+        this.kichThuocFile = ktfile;
     }
 
     /**
      * @return the duongdan
      */
     public String getDuongdan() {
-        return duongdan;
+        return duongDan;
     }
 
     /**
      * @param duongdan the duongdan to set
      */
     public void setDuongdan(String duongdan) {
-        this.duongdan = duongdan;
+        this.duongDan = duongdan;
     }
 
     /**
      * @return the sochunk
      */
     public int getSochunk() {
-        return sochunk;
+        return soChunk;
     }
 
     /**
      * @param sochunk the sochunk to set
      */
     public void setSochunk(int sochunk) {
-        this.sochunk = sochunk;
+        this.soChunk = sochunk;
     }
 
     /**
      * * Phương thức khởi tạo mặc định
      */
     public ThongTinTapTin() {
-        this.tenfile = null;
-        this.ktfile = 0;
-        this.duongdan = null;
-        this.sochunk = 0;
+        this.tenFile = null;
+        this.kichThuocFile = 0;
+        this.duongDan = null;
+        this.soChunk = 0;
 
     }
 
@@ -121,10 +121,10 @@ public class ThongTinTapTin{
      * @param chunk
      */
     public ThongTinTapTin(String ten, long kt, String dd, int chunk) {
-        this.tenfile = ten;
-        this.ktfile = kt;
-        this.duongdan = dd;
-        this.sochunk = chunk;
+        this.tenFile = ten;
+        this.kichThuocFile = kt;
+        this.duongDan = dd;
+        this.soChunk = chunk;
     }
 
     /**
@@ -132,10 +132,10 @@ public class ThongTinTapTin{
      * @param f
      */
     public ThongTinTapTin(File f) {
-        this.tenfile = f.getName();
-        this.ktfile = f.length();
-        this.duongdan = f.getAbsolutePath();
-        this.sochunk = demchunk();
+        this.tenFile = f.getName();
+        this.kichThuocFile = f.length();
+        this.duongDan = f.getAbsolutePath();
+        this.soChunk = demChunk();
     }
 
     /**
@@ -143,9 +143,9 @@ public class ThongTinTapTin{
      *
      * @return
      */
-    public int demchunk() {
-        int dem = (int) (ktfile / getKichThuocChunk());
-        if (dem * getKichThuocChunk() < ktfile) {
+    public int demChunk() {
+        int dem = (int) (kichThuocFile / getKichThuocChunk());
+        if (dem * getKichThuocChunk() < kichThuocFile) {
             dem++;
         }
         
@@ -180,7 +180,7 @@ public class ThongTinTapTin{
     public boolean ghichunk(int chisochunk, byte[] data) {
         FileOutputStream out = null;
         try {
-            File f = new File(ThongTinChunk.ddmacdinh + tenfile + "/" + tenfile + "_" + chisochunk + ".chunk");
+            File f = new File(ThongTinChunk.duongDanChunk + tenFile + "/" + tenFile + "_" + chisochunk + ".chunk");
             out = new FileOutputStream(f);
             out.write(data);
             out.flush();
@@ -207,9 +207,9 @@ public class ThongTinTapTin{
         FileInputStream fis = null;
         byte[] buffer = null;
         try {
-            File f = new File(ThongTinChunk.ddmacdinh + tenfile + "/" + tenfile + "_" + indexchunk + ".chunk");
+            File f = new File(ThongTinChunk.duongDanChunk + tenFile + "/" + tenFile + "_" + indexchunk + ".chunk");
             fis = new FileInputStream(f);
-            buffer = new byte[(int) ktchunk];
+            buffer = new byte[(int) kichThuocChunk];
             int readsize = fis.read(buffer);
             if (readsize < getKichThuocChunk()) {
                 byte[] newbuffer = new byte[readsize];
@@ -217,7 +217,7 @@ public class ThongTinTapTin{
                 return newbuffer;
             }
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Lỗi\n\n" + ex.getMessage());
+            //JOptionPane.showMessageDialog(null, "Lỗi\n\n" + ex.getMessage());
         } finally {
             try {
                 fis.close();

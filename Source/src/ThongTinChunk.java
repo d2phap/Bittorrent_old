@@ -8,22 +8,23 @@
  * @author OPTIMUS
  */
 public class ThongTinChunk {
-    public static String ddmacdinh = "Chunk/"; // mặc định đường dẫn Chunk
-    public static String luufile = "ghepfile/"; // mặc định file được ghép lưu vào 
+    public static String duongDanChunk = "Chunk/"; // mặc định đường dẫn Chunk
+    public static String duongDanLuuChunk = "ghepfile/"; // mặc định file được ghép lưu vào 
+    private TrangThaiChunk[] trangThaiChunk;
     
     /**
      * Lưu trạng thái khi dowload
      */
     public static enum TrangThaiChunk {
-        EMPTY,
-        DOWNLOADING,
-        ERROR,
-        COMPLETED
+        MAC_DINH,
+        DANG_TAI,
+        LOI,
+        TAI_HOAN_TAT
     }
     
-    private TrangThaiChunk[] chunkState;
+    
     public TrangThaiChunk getTrangThai(int index) {
-        return chunkState[index];
+        return trangThaiChunk[index];
     }
     
     /**
@@ -33,7 +34,7 @@ public class ThongTinChunk {
      */
     public void setTrangThai(int index, TrangThaiChunk newState)
     {
-        chunkState[index] = newState;
+        trangThaiChunk[index] = newState;
     }
     
     /**
@@ -42,12 +43,12 @@ public class ThongTinChunk {
      */
     public ThongTinChunk(int chunkCount)
     {
-        chunkState = new TrangThaiChunk[chunkCount];
+        trangThaiChunk = new TrangThaiChunk[chunkCount];
         for (int i = 0; i < chunkCount; i++)
-            chunkState[i] = TrangThaiChunk.EMPTY;
+            trangThaiChunk[i] = TrangThaiChunk.MAC_DINH;
     }
     
     public int getSoLuongChunk() {
-        return chunkState.length;
+        return trangThaiChunk.length;
     }
 }

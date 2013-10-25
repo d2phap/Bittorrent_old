@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class ThreadDownloadChunk extends Thread {
 
     public ThongTinTapTin file;
-    public peerinfo peer;
+    public ThongTinPeer peer;
     public int thuTuChunk; // thứ tự chunk đang tải về
     private byte[] buffer;
     private int port = 1;
@@ -56,8 +56,8 @@ public class ThreadDownloadChunk extends Thread {
                 }
 
 
-                for (int i = 0; i < peer.countlspeer(); i++) {
-
+                for (int i = 0; i < peer.countListPeer(); i++) {
+                    
                     try {
                         buffer = new byte[1024];
 
@@ -65,24 +65,29 @@ public class ThreadDownloadChunk extends Thread {
                         socket.setSoTimeout(5000);
 
                         sendPacket = new DatagramPacket("Down_File".getBytes(), "Down_File".getBytes().length,
-                                peer.getLspeer(i).getIpaddresss(), Bittorent_Like.portlisten);
-
+                                peer.getListPeer(i).getIPAddresss(), Bittorent.portListen);
+                        LogFile.Write("Gửi yêu cầu Down_File");
                         socket.send(sendPacket); //gui Yêu Cầu down_file 
                         rcvPacket = new DatagramPacket(buffer, buffer.length);
+                        LogFile.Write("Nhận yêu cầu Down_File");
                         socket.receive(rcvPacket); // Nhận ok
 
                         String rc = new String(rcvPacket.getData(), 0, rcvPacket.getLength());
 
                         if (rc != null) {
-                            sendPacket = new DatagramPacket(tenChunk.getBytes(), tenChunk.getBytes().length, rcvPacket.getAddress(), rcvPacket.getPort());
+                            sendPacket = new DatagramPacket(tenChunk.getBytes(), tenChunk.getBytes().length, 
+                                    rcvPacket.getAddress(), rcvPacket.getPort());
 
+                            LogFile.Write("Gửi tên tập tin chunk: " + tenChunk);
                             socket.send(sendPacket); //gui tenfile_sochunk
+                            
+                            LogFile.Write("Nhận dữ liệu 1024 bytes");
                             socket.receive(rcvPacket); // nhận 1024 byte
 
                             sendPacket = new DatagramPacket("OK".getBytes(), "OK".getBytes().length, rcvPacket.getAddress(), rcvPacket.getPort());
                             rc = new String(rcvPacket.getData(), 0, rcvPacket.getLength()); // kiểm tra xem có file đó ko
 
-                            byte[] data = new byte[(int) file.ktchunk];// lưu chunk có kích thước 512 kb
+                            byte[] data = new byte[(int) file.kichThuocChunk];// lưu chunk có kích thước 512 kb
                             int n = 0; // số lần startDownload
                             int size = 0;
 

@@ -21,26 +21,53 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author OPTIMUS
  */
-public class Bittorent_Like extends javax.swing.JFrame {
+public class Bittorent extends javax.swing.JFrame {
 
     /**
-     * Creates new form Bittorent_Like
+     * Creates new form Bittorent
      */
-    public static peerinfo peer;
-    public static int portlisten = 1991;
-    public static int portdow = 1001;
-    public static listen nghe;
-    public static sendrequest gui;
+    public static ThongTinPeer peer;
+    public static int portListen = 1991;
+    public static int portDown = 1001;
+    public static ThreadListenner nghe;
+    public static SendRequest gui;
     public static File f;
     private ThreadDownloadTorrent dlTorrent;
     private int isPause = 0;
 
-    public Bittorent_Like() {
-
-        peer = new peerinfo();
-        nghe = new listen();
+    public Bittorent() {
+        
+        LogFile.Write("#START_PROGRAM-----------------------------------------------------");
+        
+        File dir = new File("./ghepfile");
+        if(!dir.exists())
+        {
+            dir.mkdirs();
+        }
+        
+        dir = new File("./torrent");
+        if(!dir.exists())
+        {
+            dir.mkdirs();
+        }
+        
+        dir = new File("./Chunk");
+        if(!dir.exists())
+        {
+            dir.mkdirs();
+        }
+        
+        dir = new File("./Map");
+        if(!dir.exists())
+        {
+            dir.mkdirs();
+        }
+        
+        
+        peer = new ThongTinPeer();
+        nghe = new ThreadListenner();
         nghe.start();
-        gui = new sendrequest();
+        gui = new SendRequest();
         gui.peer = peer;
         gui.gui();
 
@@ -145,7 +172,6 @@ public class Bittorent_Like extends javax.swing.JFrame {
             }
         });
 
-        txtTaiTorrent.setEditable(false);
         txtTaiTorrent.setText("##");
 
         btnTaiTatCa.setText("Tải tất cả");
@@ -288,7 +314,6 @@ public class Bittorent_Like extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-        LogFile.Write("#START_PROGRAM-----------------------------------------------------");
         lblStatus.setText("");
     }//GEN-LAST:event_formWindowOpened
 
@@ -316,10 +341,33 @@ public class Bittorent_Like extends javax.swing.JFrame {
         fo.setTenfile(tenfile);
         down.file = fo;
         down.peer = peer;
+        
         String[] mang = chunk.split("_");
         String tam = mang[mang.length - 1]; //lay phan tu _ cuoi cung
         tam = tam.substring(0, tam.length() - 6); //loc lay thu tu chunk
         down.thuTuChunk = Integer.parseInt(tam);
+        
+        down.addCustomListener(new CustomEventListener() {
+
+            @Override
+            public void onStart(CustomEventObject e) {
+                lblStatus.setText("Đang tải tập tin " + e._object1);
+                progStatus.setValue(0);
+            }
+
+            @Override
+            public void onOccur(CustomEventObject e) {
+                
+            }
+
+            @Override
+            public void onFinish(CustomEventObject e) {
+                lblStatus.setText("Tải hoàn tất");
+                progStatus.setValue(progStatus.getMaximum());
+            }
+        });
+        
+        
         System.out.println("Đang dow chunk: " + mang[mang.length - 1]);
         down.start();
         
@@ -352,7 +400,7 @@ public class Bittorent_Like extends javax.swing.JFrame {
                     dlTorrent.pauseThread();
                     btnTaiTatCa.setText("Phục hồi");
                 } catch (InterruptedException ex) {
-                    Logger.getLogger(Bittorent_Like.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Bittorent.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 
                 return;
@@ -454,7 +502,7 @@ public class Bittorent_Like extends javax.swing.JFrame {
                 fi.setSochunk(sochunk);
                 
                 for (int i = 0; i < sochunk; i++) {
-                    File f = new File(ThongTinChunk.ddmacdinh + ten + "/" + ten + "_" + (i + 1 + ".chunk"));
+                    File f = new File(ThongTinChunk.duongDanChunk + ten + "/" + ten + "_" + (i + 1 + ".chunk"));
 
                     if (!f.exists()) {
                         jCboChunk.enable(true);
@@ -502,7 +550,7 @@ public class Bittorent_Like extends javax.swing.JFrame {
             try {
                 in.close();
             } catch (IOException ex) {
-                Logger.getLogger(Bittorent_Like.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Bittorent.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         
@@ -603,20 +651,20 @@ public class Bittorent_Like extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Bittorent_Like.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Bittorent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Bittorent_Like.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Bittorent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Bittorent_Like.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Bittorent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Bittorent_Like.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Bittorent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Bittorent_Like().setVisible(true);
+                new Bittorent().setVisible(true);
             }
         });
     }
